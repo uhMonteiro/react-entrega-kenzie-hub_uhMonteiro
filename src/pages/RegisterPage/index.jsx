@@ -1,7 +1,11 @@
+import { FormRegister } from "../../components/FormRegister";
+import { HeaderRegister } from "../../components/HeaderRegister";
+
 export function RegisterPage(){
     return(
         <div>
-            <h1>Register</h1>
+            <HeaderRegister/>
+            <FormRegister/>
         </div>
     )
 }

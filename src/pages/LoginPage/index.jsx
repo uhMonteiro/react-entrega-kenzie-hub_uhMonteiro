@@ -1,7 +1,12 @@
+import { Link } from "react-router-dom";
+import { HeaderLogin } from "../../components/HeaderLogin";
+import { FormLogin } from "../../components/FormLogin";
+
 export function LoginPage(){
     return(
-        <div>
-            <h1>Login</h1>
-        </div>
+        <body>
+          <HeaderLogin/>
+          <FormLogin/>
+        </body>
     )
 }
