@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
     box-sizing: border-box;
+	font-family: var(--Font-primary);
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {

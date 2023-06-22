@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
-import { FormStyle } from "./style";
+import { FormStyle, H1StyleLogin, InputStyle, LabelStyle } from "./style";
 
 
 export function FormLogin(){
     return(
         <FormStyle action="">
-            <h1>Login</h1>
-            <p>Email</p>
-            <input type="email" placeholder="Digite seu email"/>
-            <p>Senha</p>
-            <input type="password" placeholder="Digite sua senha"/>
+            <H1StyleLogin>Login</H1StyleLogin>
+            <LabelStyle>Email
+              <InputStyle type="email" placeholder="Digite seu email"/>
+            </LabelStyle>
+            <LabelStyle>Senha
+              <InputStyle type="password" placeholder="Digite sua senha"/>
+            </LabelStyle>
             <Link to="/homePage">
               <button>Entrar</button>
             </Link>

@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
 import { HeaderLogin } from "../../components/HeaderLogin";
 import { FormLogin } from "../../components/FormLogin";
 import { GlobalReset } from "../../styles/reset";
 import { GlobalStyle } from "../../styles/global";
-import { MainLoginStyle } from "./style";
+import { MainStyle } from "./style";
 
 export function LoginPage(){
     return(
@@ -11,9 +10,9 @@ export function LoginPage(){
         <GlobalReset/>
         <GlobalStyle/>
         <HeaderLogin/>
-        <MainLoginStyle>
+        <MainStyle>
         <FormLogin/>
-        </MainLoginStyle>
+        </MainStyle>
       </>
     )
 }

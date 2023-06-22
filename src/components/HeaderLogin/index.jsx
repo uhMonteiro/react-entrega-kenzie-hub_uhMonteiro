@@ -1,9 +1,10 @@
 import logo from "../../assets/logo.svg"
+import { StyleHeaderLogin } from "./style"
 
 export function HeaderLogin(){
     return(
-        <header>
+        <StyleHeaderLogin>
             <img src={logo} alt="" />
-        </header>
+        </StyleHeaderLogin>
     )
 }

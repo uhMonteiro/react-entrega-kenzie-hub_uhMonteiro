@@ -12,5 +12,8 @@ export const GlobalStyle = createGlobalStyle`
 	--color-grey-0: #f8f9fa;
 	--color-sucess: #3fe864;
 	--color-negative: #e83f5b;
+
+	font-size: 62.5%;
+	--Font-primary:  'Inter', sans-serif;
 }
 `

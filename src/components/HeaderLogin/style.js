@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 
-export const MainStyle = styled.main`
+export const StyleHeaderLogin = styled.header`
     display: flex;
-    align-items: center;
     justify-content: center;
+    margin-top: 60px;
 `
