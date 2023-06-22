@@ -1,8 +1,9 @@
+import { FormStyle } from "../FormLogin/style";
 
 
 export function FormRegister(){
     return(
-        <form action="">
+        <FormStyle action="">
             <h1>Crie sua conta</h1>
             <p>Rapido e grátis, vamos nessa</p>
             <p>Nome</p>
@@ -21,6 +22,6 @@ export function FormRegister(){
             <select name="" id="">
                 <option value="">Primeiro Módulo</option>
             </select>
-        </form>
+        </FormStyle>
     )
 }
