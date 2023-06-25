@@ -1,22 +1,30 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FormStyle, H1StyleLogin, InputStyle, LabelStyle } from "./style";
 import { api } from "../../services/api";
 import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod"
+import { addLoginSchema } from "./addLoginSchema";
 
 
 export function FormLogin(){
-  const { register , handleSubmit} = useForm()
+  const { register , handleSubmit, formState: { errors }} = useForm({
+    resolver: zodResolver(addLoginSchema)
+  })
+
+  const navigate = useNavigate()
 
   async function LoginUser(formData){
     try {
       const {data} = await api.post("/sessions", formData)
+      navigate("/homePage")
       console.log(data)
     } catch (error) {
-      console.log("erro")
+      alert("Usuário inválido")
     }
   }
 
   async function submit(formData){
+    console.log(formData)
     LoginUser(formData)
   }
 
@@ -29,15 +37,15 @@ export function FormLogin(){
               <InputStyle 
               type="email" 
               placeholder="Digite seu email"
-              required
               {...register("email")}/>
+              {errors.email?.message}
             </LabelStyle>
             <LabelStyle>Senha
               <InputStyle 
               type="password" 
               placeholder="Digite sua senha"
-              required
               {...register("password")}/>
+              {errors.password?.message}
             </LabelStyle>
               <button>Entrar</button>
             <Link to="/registerPage"> 
