@@ -50,3 +50,25 @@ color: var(--color-grey-0);
     color: var(--color-grey-0);
 }
 `
+
+export const ButtonEnterStyle = styled.button`
+   width: 100%;
+   height: 30px;
+   background-color: var(--color-color-primary);
+   border-radius: 4px;
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: 500;
+   font-size: 1.6rem;
+   color: white;
+
+   :hover{
+    background-color: var(--color-color-primary-50);
+   }
+`
+
+export const ButtonRegisterStyle = styled.button`
+
+`

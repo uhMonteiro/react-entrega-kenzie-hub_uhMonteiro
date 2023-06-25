@@ -4,14 +4,14 @@ import { PostDivArea } from "../../components/PostDivArea";
 import { GlobalStyle } from "../../styles/global";
 import { GlobalReset } from "../../styles/reset";
 
-export function HomePage(){
+export function HomePage({ user }){
     return(
         <>
           <GlobalReset/>
           <GlobalStyle/>
           <HeaderHome/>
           <main>
-          <NameDivHome/>
+          <NameDivHome user={ user }/>
           <PostDivArea/>
           </main>
         </>

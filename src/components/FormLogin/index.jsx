@@ -1,12 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
-import { FormStyle, H1StyleLogin, InputStyle, LabelStyle } from "./style";
+import { ButtonEnterStyle, FormStyle, H1StyleLogin, InputStyle, LabelStyle } from "./style";
 import { api } from "../../services/api";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { addLoginSchema } from "./addLoginSchema";
 
-
-export function FormLogin(){
+export function FormLogin({ setUser }){
   const { register , handleSubmit, formState: { errors }} = useForm({
     resolver: zodResolver(addLoginSchema)
   })
@@ -17,18 +16,17 @@ export function FormLogin(){
     try {
       const {data} = await api.post("/sessions", formData)
       navigate("/homePage")
-      console.log(data)
+      localStorage.setItem("@KenzieHub:token" , data.token)
+      localStorage.setItem("@KenzieHub:userId", data.user.id)
+      setUser(data.user)
     } catch (error) {
       alert("Usuário inválido")
     }
   }
 
   async function submit(formData){
-    console.log(formData)
     LoginUser(formData)
   }
-
-  
 
     return(
         <FormStyle onSubmit={handleSubmit(submit)}>
@@ -47,7 +45,7 @@ export function FormLogin(){
               {...register("password")}/>
               {errors.password?.message}
             </LabelStyle>
-              <button>Entrar</button>
+              <ButtonEnterStyle>Entrar</ButtonEnterStyle>
             <Link to="/registerPage"> 
               <button>Cadastre-se</button>
             </Link>

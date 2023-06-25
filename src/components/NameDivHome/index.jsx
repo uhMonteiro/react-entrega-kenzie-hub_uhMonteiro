@@ -1,10 +1,10 @@
 
 
-export function NameDivHome(){
+export function NameDivHome({ user }){
     return(
         <section>
-            <h2>Olá, Nome</h2>
-            <p>Módulo (Introdução ao Y)</p>
+            <h2>Olá, {user.name}</h2>
+            <p>{user.course_module} </p>
         </section>
     )
 }
