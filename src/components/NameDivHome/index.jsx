@@ -1,10 +1,12 @@
+import { H1StyleLogin, PStyle } from "../FormLogin/style";
+import { SectionHomeStyle } from "./style";
 
 
 export function NameDivHome({ user }){
     return(
-        <section>
-            <h2>Olá, {user.name}</h2>
-            <p>{user.course_module} </p>
-        </section>
+        <SectionHomeStyle>
+            <H1StyleLogin>Olá, {user.name}</H1StyleLogin>
+            <PStyle>{user.course_module} </PStyle>
+        </SectionHomeStyle>
     )
 }

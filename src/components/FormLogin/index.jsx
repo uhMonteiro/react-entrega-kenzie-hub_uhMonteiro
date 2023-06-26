@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { ButtonEnterStyle, FormStyle, H1StyleLogin, InputStyle, LabelStyle } from "./style";
+import { ButtonEnterStyle, ButtonRegisterStyle, FormStyle, H1StyleLogin, InputStyle, LabelStyle, PStyle } from "./style";
 import { api } from "../../services/api";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -46,8 +46,9 @@ export function FormLogin({ setUser }){
               {errors.password?.message}
             </LabelStyle>
               <ButtonEnterStyle>Entrar</ButtonEnterStyle>
-            <Link to="/registerPage"> 
-              <button>Cadastre-se</button>
+              <PStyle>Ainda não possui uma conta?</PStyle>
+            <Link to="/registerPage" style={{ textDecoration: 'none' }}> 
+              <ButtonRegisterStyle>Cadastre-se</ButtonRegisterStyle>
             </Link>
         </FormStyle>
     )

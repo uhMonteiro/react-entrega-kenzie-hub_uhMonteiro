@@ -32,8 +32,8 @@ export const LabelStyle = styled.label`
 `
 
 export const InputStyle = styled.input`
-height: 20px;
-border: 1px solid var(--color-grey-0);
+height: 25px;
+border: none;
 border-radius: 4px;
 padding-left: 16px;
 padding-right: 16px;
@@ -47,7 +47,7 @@ color: var(--color-grey-0);
     font-weight: 400;
     font-size: 1.6rem;
     align-self: center;
-    color: var(--color-grey-0);
+    color: var(--color-grey-1);
 }
 `
 
@@ -65,10 +65,27 @@ export const ButtonEnterStyle = styled.button`
    color: white;
 
    :hover{
-    background-color: var(--color-color-primary-50);
+    background-color: var(--color-color-primary-disable);
    }
 `
 
-export const ButtonRegisterStyle = styled.button`
+export const PStyle = styled.p`
+    align-self: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color-grey-1);
+`
 
+export const ButtonRegisterStyle = styled.button`
+   width: 100%;
+   height: 30px;
+   background-color: var(--color-grey-1);
+   border-radius: 4px;
+   border: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: 500;
+   font-size: 1.6rem;
+   color: white;
 `

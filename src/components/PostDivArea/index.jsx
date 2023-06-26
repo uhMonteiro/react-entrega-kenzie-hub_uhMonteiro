@@ -1,11 +1,12 @@
+import { H2PostStyle, PStylePost, SectionPostStyle } from "./style";
 
 
 export function PostDivArea(){
     return(
-        <section>
-            <h2>Que pena! Estamos em desenvolvimento :(</h2>
-            <p>Nossa aplicação está em desenvolvimento, 
-               em breve teremos novidades</p>
-        </section>
+        <SectionPostStyle>
+            <H2PostStyle>Que pena! Estamos em desenvolvimento :(</H2PostStyle>
+            <PStylePost>Nossa aplicação está em desenvolvimento, 
+               em breve teremos novidades</PStylePost>
+        </SectionPostStyle>
     )
 }

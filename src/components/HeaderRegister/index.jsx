@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom"
 import logo from "../../assets/logo.svg"
+import { ButtonHeaderRegister, HeaderRegisterStyle } from "./style"
 
 export function HeaderRegister(){
     return(
-        <header>
+        <HeaderRegisterStyle>
             <img src={ logo } alt="" />
             <Link to="/">
-              <button>Voltar</button>
+              <ButtonHeaderRegister>Voltar</ButtonHeaderRegister>
             </Link>
-        </header>
+        </HeaderRegisterStyle>
     )
 }

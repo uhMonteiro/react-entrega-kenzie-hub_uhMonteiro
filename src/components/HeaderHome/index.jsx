@@ -1,5 +1,6 @@
 import {  useNavigate } from "react-router-dom"
 import logo from "../../assets/logo.svg"
+import { ButtonHeaderHome, HeaderHomeStyle } from "./style"
 
 export function HeaderHome(){
     const navigate = useNavigate()
@@ -12,9 +13,9 @@ export function HeaderHome(){
     }
 
     return(
-        <header>
+        <HeaderHomeStyle>
             <img src={logo} alt="" />
-              <button onClick={handleSubmit}>Sair</button>
-        </header>
+              <ButtonHeaderHome onClick={handleSubmit}>Sair</ButtonHeaderHome>
+        </HeaderHomeStyle>
     )
 }
