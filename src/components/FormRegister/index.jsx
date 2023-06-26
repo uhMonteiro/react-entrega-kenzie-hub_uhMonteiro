@@ -18,7 +18,6 @@ export function FormRegister(){
       try {
         const {data} = await api.post("/users", formData)
         navigate("/")
-        console.log(data)
       } catch (error) {
         alert("Dados inválidos")
       }

@@ -6,7 +6,6 @@ import { useState } from "react"
 
 export function RoutesMain(){
     const [ user , setUser] = useState([])
-    console.log(user)
 
     return(
         <Routes>
