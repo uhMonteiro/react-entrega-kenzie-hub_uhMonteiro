@@ -4,14 +4,14 @@ import { GlobalReset } from "../../styles/reset";
 import { GlobalStyle } from "../../styles/global";
 import { MainStyle } from "./style";
 
-export function LoginPage({ setUser }){
+export function LoginPage(){
     return(
       <>
         <GlobalReset/>
         <GlobalStyle/>
         <HeaderLogin/>
         <MainStyle>
-        <FormLogin setUser={ setUser }/>
+        <FormLogin/>
         </MainStyle>
       </>
     )

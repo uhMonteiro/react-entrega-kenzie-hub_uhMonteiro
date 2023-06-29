@@ -1,21 +1,15 @@
-import {  useNavigate } from "react-router-dom"
+import { useContext } from "react"
 import logo from "../../assets/logo.svg"
 import { ButtonHeaderHome, HeaderHomeStyle } from "./style"
+import { UserContext } from "../../providers/UserContext"
 
 export function HeaderHome(){
-    const navigate = useNavigate()
-
-    const handleSubmit = (event) =>{
-        event.preventDefault()
-        localStorage.removeItem("@KenzieHub:token")
-        localStorage.removeItem("@KenzieHub:userId")
-        navigate("/")
-    }
+    const {userLogout} = useContext(UserContext)
 
     return(
         <HeaderHomeStyle>
             <img src={logo} alt="" />
-              <ButtonHeaderHome onClick={handleSubmit}>Sair</ButtonHeaderHome>
+              <ButtonHeaderHome onClick={userLogout}>Sair</ButtonHeaderHome>
         </HeaderHomeStyle>
     )
 }

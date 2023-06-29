@@ -1,28 +1,18 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ButtonEnterStyle, ButtonRegisterStyle, FormStyle, H1StyleLogin, InputStyle, LabelStyle, PStyle } from "./style";
-import { api } from "../../services/api";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { addLoginSchema } from "./addLoginSchema";
+import { useContext } from "react";
+import { UserContext } from "../../providers/UserContext";
 
-export function FormLogin({ setUser }){
+export function FormLogin(){
+  
   const { register , handleSubmit, formState: { errors }} = useForm({
     resolver: zodResolver(addLoginSchema)
   })
-
-  const navigate = useNavigate()
-
-  async function LoginUser(formData){
-    try {
-      const {data} = await api.post("/sessions", formData)
-      navigate("/homePage")
-      localStorage.setItem("@KenzieHub:token" , data.token)
-      localStorage.setItem("@KenzieHub:userId", data.user.id)
-      setUser(data.user)
-    } catch (error) {
-      alert("Usuário inválido")
-    }
-  }
+  
+  const { LoginUser } = useContext(UserContext)
 
   async function submit(formData){
     LoginUser(formData)
