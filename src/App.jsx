@@ -1,12 +1,12 @@
-import { UserProvider } from "./providers/UserContext"
+import { useContext } from "react"
 import { RoutesMain } from "./routes/RoutesMain"
+import { UserContext } from "./providers/UserContext"
 
 function App() {
+  const { loading } = useContext(UserContext)
   return (
     <>
-     <UserProvider>
-       <RoutesMain/>
-     </UserProvider>
+      {loading ? <p>Carregando...</p> : <RoutesMain/>}
     </>
   )
 }
