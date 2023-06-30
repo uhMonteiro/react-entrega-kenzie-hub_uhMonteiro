@@ -1,10 +1,10 @@
 import { useForm } from "react-hook-form"
 import { ButtonEnterStyle, FormStyle, H1StyleLogin, InputStyle, LabelStyle, PStyle } from "../FormLogin/style"
-import { api } from "../../services/api"
-import { useNavigate } from "react-router-dom"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { addRegisterSchema } from "./addRegisterSchema"
 import { SelectSTyle } from "./style"
+import { useContext } from "react"
+import { UserContext } from "../../providers/UserContext"
 
 
 export function FormRegister(){
@@ -12,16 +12,7 @@ export function FormRegister(){
       resolver: zodResolver(addRegisterSchema)
     })
 
-    const navigate = useNavigate()
-
-    async function createUser(formData){
-      try {
-        const {data} = await api.post("/users", formData)
-        navigate("/")
-      } catch (error) {
-        alert("Dados inválidos")
-      }
-    }
+    const { createUser } = useContext(UserContext)
 
     async function submit(formData){
       createUser(formData)

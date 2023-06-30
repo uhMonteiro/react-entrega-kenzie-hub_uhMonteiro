@@ -1,4 +1,4 @@
-import { H1ModalStyle, HeaderModalStyle, XModalStyle } from "./style";
+import { H1ModalStyle, HeaderModalStyle, XModalStyle } from "./style"
 
 
 export function HeaderModal(){

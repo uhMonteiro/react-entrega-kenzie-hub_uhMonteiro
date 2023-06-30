@@ -1,4 +1,4 @@
-import { HeaderModalStyle } from "../HeaderModal/style";
+import { HeaderModalStyle } from "../HeaderModal/style"
 
 
 export function Modal(){

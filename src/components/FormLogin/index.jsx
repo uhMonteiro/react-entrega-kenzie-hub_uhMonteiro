@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-import { ButtonEnterStyle, ButtonRegisterStyle, FormStyle, H1StyleLogin, InputStyle, LabelStyle, PStyle } from "./style";
-import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom"
+import { ButtonEnterStyle, ButtonRegisterStyle, FormStyle, H1StyleLogin, InputStyle, LabelStyle, PStyle } from "./style"
+import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { addLoginSchema } from "./addLoginSchema";
-import { useContext } from "react";
-import { UserContext } from "../../providers/UserContext";
+import { addLoginSchema } from "./addLoginSchema"
+import { useContext } from "react"
+import { UserContext } from "../../providers/UserContext"
 
 export function FormLogin(){
   
